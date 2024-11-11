@@ -3,7 +3,7 @@
 
 #include <list>
 #include "product.h"
-
+#include "product.cpp"
 class List_products{
 private:
 	list<product> li;

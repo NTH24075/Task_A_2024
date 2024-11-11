@@ -1,4 +1,4 @@
-#include "product_app.h"
+#include "product_app.cpp"
 
 int main() {
     product_app app;
