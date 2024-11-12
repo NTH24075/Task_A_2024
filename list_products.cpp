@@ -28,11 +28,7 @@ void List_products::read_From_Txt(){
 	fileIn.close();
 }
 
-void List_products::append(){
-	product a;
-	cin>>a;
-	li.push_back(a);
-}
+
 product* List_products::findByID(string ID_find){
 	for ( auto& prod : li) {
             if(prod.getID()==ID_find){
@@ -50,6 +46,16 @@ product* List_products::findByName(string name_find){
             }
         }
     return NULL;
+}
+void List_products::append(){
+	product a;
+	cin>>a;
+	product* found=findByID(a.getID());
+	if(found==NULL) li.push_back(a);
+	else {
+		cout<<"\nSan pham da ton tai!\nTinh trang kiem tra: ";
+	}
+
 }
 void List_products::remove_product(){
 	cout<<"Tim san pham can xoa bang ID hoac ten: ";

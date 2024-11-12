@@ -20,6 +20,12 @@ int product::getAmount() const{
 float product::getCost() const{
 	return this->cost;
 }
+void product::setAmount(int newAmount){
+	this->amount=newAmount;
+}
+void product::setCost(float newCost){
+	this->cost=newCost;
+}
 ostream& operator << (ostream& cout,product& a){
 	cout<<"Thong tin hang hoa: \n";
 	cout<<"ID hang: "<<a.id;

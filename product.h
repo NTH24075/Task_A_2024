@@ -16,6 +16,8 @@ public:
 	string getName() const;
 	int getAmount() const;
 	float getCost() const;
+	void setAmount(int newAmount);
+	void setCost(float newCost);
 	friend ostream& operator << (ostream& out,product& a);
 	friend istream& operator >> (istream& in,product& a);
 	bool operator > (product other_hang);
